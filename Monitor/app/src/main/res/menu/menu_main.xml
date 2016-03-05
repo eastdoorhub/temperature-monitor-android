@@ -1,0 +1,16 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/apk/res-auto"
+      xmlns:tools="http://schemas.android.com/tools"
+      tools:context="com.xdd.tool.monitor.MainActivity">
+    <item android:id="@+id/icon2"
+          android:title="icon"
+          android:icon="@mipmap/ic_launcher"
+          android:checkable="true"
+          android:checked="false"
+        />
+    <item
+        android:id="@+id/action_settings"
+        android:orderInCategory="100"
+        android:title="@string/action_settings"
+        app:showAsAction="never"/>
+</menu>
