@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">小叮当温度检测</string>
+    <string name="action_settings">设置</string>
+    <string name="blue_status">蓝牙连接状态</string>
+    <string name="blue_device">蓝牙设备</string>
+    <string name="current_temp">当前温度湿度：</string>
+</resources>

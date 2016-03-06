@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/layoutView"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.xdd.tool.tempmonitor41.MainActivity">
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/current_temp"
+        android:id="@+id/textView"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="1dp"
+        android:layout_gravity="start"
+        tools:ignore="HardcodedText"/>
+
+    <Button
+        android:id="@+id/btnScanBlueTooth"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:onClick="scanBlueTooth"
+        android:text="查找蓝牙设备"
+        android:layout_marginTop="180dp"
+        android:layout_below="@+id/textView"
+        tools:ignore="HardcodedText"/>
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/blue_device"
+        android:id="@+id/blueToothDevices"
+        android:layout_gravity="start"
+        android:layout_below="@+id/btnScanBlueTooth"
+        tools:ignore="HardcodedText"/>
+
+    <EditText
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/editExit"
+        android:text="请输入蓝牙设备号（,）"
+        android:layout_gravity="start"
+        android:layout_below="@+id/blueToothDevices"
+        android:inputType=""/>
+
+    <Button
+        android:id="@+id/button5"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:onClick="connectBlueTooth"
+        android:text="连接蓝牙设备"
+        android:layout_below="@+id/editExit"/>
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/blue_status"
+        android:id="@+id/connectBlueToothStatus"
+        android:layout_gravity="start"
+        android:layout_below="@+id/button5"
+        tools:ignore="layout_alignParentStart"/>
+
+    <EditText
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/editTextPhoneNumber"
+        android:text="+8615821835927"
+        android:layout_gravity="start"
+        android:layout_below="@+id/connectBlueToothStatus"
+        android:inputType=""/>
+
+    <Button
+        android:id="@+id/button6"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:onClick="setManualSms"
+        android:text="手动发送短信（已关闭）"
+        android:layout_below="@+id/editTextPhoneNumber"/>
+
+    <Button
+        android:id="@+id/button7"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:onClick="setAutoSms"
+        android:text="自动发送短信（已关闭）"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="1dp"/>
+
+</RelativeLayout>
