@@ -27,7 +27,7 @@
         android:layout_height="wrap_content"
         android:onClick="scanBlueTooth"
         android:text="查找蓝牙设备"
-        android:layout_marginTop="180dp"
+        android:layout_marginTop="170dp"
         android:layout_below="@+id/textView"
         tools:ignore="HardcodedText"/>
 

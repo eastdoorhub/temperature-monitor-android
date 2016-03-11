@@ -231,8 +231,8 @@ public class MainActivity extends AppCompatActivity {
         for (Pair<Integer, BluetoothDevice> connectingDevice : connectingDevices) {
             BluetoothDevice device = connectingDevice.second;
             //String[] strings = device.getAddress().split(":");
-            String deviceDescription = "设备号：" + connectingDevice.first;
-            deviceDescription += TempUtil.getDeviceNameDescription(device.getName(), device.getAddress());
+            //String deviceDescription = "设备号：" + connectingDevice.first;
+            String deviceDescription = TempUtil.getDeviceNameDescription(device.getName(), device.getAddress());
             //textView.append(deviceDescription);
             deviceDescription += "：";
             String deviceName = TempUtil.getDeviceName(device.getName(), device.getAddress());
@@ -243,7 +243,7 @@ public class MainActivity extends AppCompatActivity {
             } catch (InterruptedException e) {
                 //e.printStackTrace();
             }
-            topMargin += 50;
+            topMargin += 25;
         }
         Handler handler = new Handler();
         handlers.add(handler);
@@ -356,7 +356,7 @@ public class MainActivity extends AppCompatActivity {
                 myHandler.post(new Runnable() {
                     public void run() {
                         myTextView.setText(mySmsSender.getDeviceDescription());
-                        myTextView.append("读取数据中。。。。。。");
+                        myTextView.append("读取数据中。。。");
                     }
                 });
                 // 延迟再读取
@@ -488,7 +488,7 @@ public class MainActivity extends AppCompatActivity {
                 return null;
             }
             String humi[] = datas[1].split(":");
-            String sms = "温度：" + temp[1] + "；" + "湿度：" + humi[1];
+            String sms = "温度:" + temp[1] + ";" + "湿度:" + humi[1];
             return mySmsSender.getDeviceDescription() + sms;
         }
     }

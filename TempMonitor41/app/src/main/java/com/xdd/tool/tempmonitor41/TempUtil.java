@@ -14,7 +14,7 @@ final public class TempUtil {
     public static boolean robustEqual(String curTmp, String preTmp) {
         double d1 = Double.parseDouble(curTmp);
         double d2 = Double.parseDouble(preTmp);
-        if (Math.abs(d1 - d2) > 1) {
+        if (Math.abs(d1 - d2) > 2) {
             return false;
         } else {
             return true;
@@ -24,7 +24,7 @@ final public class TempUtil {
     public static boolean robustIntEqual(String curTmp, String preTmp) {
         int d1 = Integer.parseInt(curTmp);
         int d2 = Integer.parseInt(preTmp);
-        if (Math.abs(d1 - d2) > 1) {
+        if (Math.abs(d1 - d2) > 2) {
             return false;
         } else {
             return true;
@@ -45,7 +45,7 @@ final public class TempUtil {
 
     public static String getDeviceNameDescription(String name, String address){
         String[] strings = address.split(":");
-        String  deviceDescription = "设备名：" + name
+        String  deviceDescription = "设备:" + name
                 + "-" + strings[strings.length - 2] + "-" + strings[strings.length - 1];
         return deviceDescription;
     }
